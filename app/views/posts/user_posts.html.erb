@@ -1,0 +1,13 @@
+<h1>YOUR POSTS</h1>
+
+<% @posts.each do |post| %>
+  <div>
+  <p class="post-info">
+    <%= link_to post.title, post_path(post[:id]), class: "post-title" %>
+    <br>
+    <%= post.created_at.strftime("%B %d, %Y") %>  
+  </p>
+  <%= link_to "Edit", edit_post_path(post[:id]) %>
+  <%= link_to "Delete", post_path(post[:id]), data: { "turbo-method": :delete, confirm: "Are you sure?" } %>
+  </div>
+<% end %>

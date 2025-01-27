@@ -1,0 +1,33 @@
+<header id="header">
+  <div>
+    <div class="header-info">
+      <p class="header-welcome">
+        Welcome, 
+        <% if session[:user_id] %>
+          <%= session[:user_name] %>
+        <% else %>
+          Guest
+        <% end %>
+      </p>
+      <p class="header-messages">
+        <%= flash[:notice] %>
+      </p>
+      <p class="header-messages">
+        <%= flash[:alert] %>
+      </p>
+    </div>
+  </div>
+  <div class="header-buttons">
+    <%= link_to "Users", users_path, class: "header-button"%>
+    <%= link_to "Posts", posts_path, class: "header-button"%>
+    <% if !session[:user_id] %>
+      <%= link_to "Log in", login_path, class: "header-button"%>
+      <%= link_to "Sign Up", new_user_path, class: "header-button"%>
+    <% else %>
+    <%= link_to "My Posts", my_posts_path, class: "header-button"%>
+    <%= link_to "New Post", new_post_path, class: "header-button"%>
+      <%= link_to "Log out", logout_path, class: "header-button"%>
+    <% end %>
+  </div>
+
+</header>

@@ -1,0 +1,17 @@
+<%= form_with model: @user, url: login_path do |form| %>
+  <% if !@is_login %>
+  <div>
+    <%= form.label :name%>
+    <%= form.text_field :name%>
+  </div>
+  <% end %>
+  <div>
+    <%= form.label :email%>
+    <%= form.email_field :email%>
+  </div>
+  <div>
+    <%= form.label :password%>
+    <%= form.password_field :password%>
+  </div>
+  <%= form.submit "Sign In" %>
+<% end %>

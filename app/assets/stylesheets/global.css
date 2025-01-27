@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-button {
+  padding: 0.5rem 1rem;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header-button:hover {
+  background-color: #777;
+}
+
+.header-welcome {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.post-info {
+  padding: 1rem 0.5rem;
+}
+
+.post-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  /*remove underline */
+  text-decoration: none;
+  color: blue;
+}
+
+.post-body {
+  padding: 1rem 0.5rem;
+
+}

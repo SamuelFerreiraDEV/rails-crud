@@ -1,0 +1,9 @@
+<h1>ALL POSTS</h1>
+
+<% @posts.each do |post| %>
+  <p class="post-info">
+    <%= link_to post.title, post_path(post[:id]), class: "post-title" %>
+    <br>
+    <%= post.user.name %> - <%= post.created_at.strftime("%B %d, %Y") %>  
+  </p>
+<% end %>
