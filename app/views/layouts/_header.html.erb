@@ -18,7 +18,6 @@
     </div>
   </div>
   <div class="header-buttons">
-    <%= link_to "Users", users_path, class: "header-button"%>
     <%= link_to "Posts", posts_path, class: "header-button"%>
     <% if !session[:user_id] %>
       <%= link_to "Log in", login_path, class: "header-button"%>

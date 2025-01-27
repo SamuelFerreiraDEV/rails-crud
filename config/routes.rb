@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   post "users/login", to: "users#login"
   get "users/logout", to: "users#logout", as: "logout"
   get "posts/my-posts", to: "posts#user_posts", as: "my_posts"
-  resources :users, only: [ :index, :show, :new, :create ]
+  resources :users, only: [ :show, :new, :create ]
   resources :posts
 end

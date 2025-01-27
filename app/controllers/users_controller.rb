@@ -1,8 +1,4 @@
 class UsersController < ApplicationController
-  def index
-    @users = User.all
-  end
-
   def new
     if session[:user_id]
       redirect_to users_path
